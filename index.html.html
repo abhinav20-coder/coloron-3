@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COLORON Painting Contractor & Decorators | Rajesh | Bengaluru</title>
+  <meta name="description" content="COLORON Painting Contractor and Decorators — 30+ years of experience, 1000+ projects completed. Led by Rajesh. Call 9663872424 for interior, exterior and commercial painting in Bengaluru." />
+  <meta name="theme-color" content="#0A1628" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#070f1c', 900: '#0A1628', 800: '#122033', 700: '#1A2D4A', 600: '#243B5C' },
+            gold: { 300: '#E4C978', 400: '#D4AF37', 500: '#C4A35A', 600: '#A6863A' },
+            cream: '#F7F4EF',
+            sand: '#EFE8DC'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['DM Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', system-ui, sans-serif; background: #F7F4EF; color: #1a1a1a; }
+    .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+    .paint-strip { height: 6px; background: linear-gradient(90deg, #8B1E3F 0%, #C2410C 18%, #D4AF37 36%, #2F6B4F 54%, #1D4E89 72%, #6B2D5B 88%, #8B1E3F 100%); }
+    .nav-scrolled { background: rgba(10, 22, 40, 0.96); backdrop-filter: blur(14px); box-shadow: 0 8px 30px rgba(0,0,0,.25); }
+    .hero-overlay { background: linear-gradient(105deg, rgba(7,15,28,.88) 0%, rgba(10,22,40,.72) 48%, rgba(10,22,40,.45) 100%); }
+    .gold-line { width: 64px; height: 3px; background: linear-gradient(90deg, #D4AF37, #C4A35A); }
+    .card-hover { transition: transform .35s ease, box-shadow .35s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 22px 50px rgba(10,22,40,.16); }
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .menu-open { transform: translateX(0) !important; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    input:focus, textarea:focus, select:focus { outline: none; box-shadow: 0 0 0 3px rgba(212,175,55,.35); border-color: #C4A35A; }
+    .float-btn { box-shadow: 0 10px 28px rgba(0,0,0,.28); }
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, .55); }
+      70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    .wa-pulse { animation: pulse-ring 1.8s infinite; }
+    .stat-num { font-variant-numeric: tabular-nums; }
+    .img-zoom { overflow: hidden; }
+    .img-zoom img { transition: transform .7s ease; }
+    .img-zoom:hover img { transform: scale(1.08); }
+  </style>
+</head>
+<body class="antialiased">
+  <div class="paint-strip"></div>
+
+  <!-- NAV -->
+  <header id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="flex items-center justify-between h-[76px]">
+        <a href="#home" class="flex items-center gap-3 group">
+          <span class="relative flex h-10 w-10 items-center justify-center rounded-full border border-gold-400/70 bg-navy-800">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 20c4-1 7-6 8-12 2 8 5 11 8 12" stroke="#D4AF37" stroke-width="1.7" stroke-linecap="round"/>
+              <circle cx="12" cy="6" r="2.2" fill="#D4AF37"/>
+            </svg>
+          </span>
+          <span>
+            <span class="block font-serif text-xl tracking-wide text-white leading-none">COLORON</span>
+            <span class="block text-[10px] tracking-[0.22em] uppercase text-gold-400 mt-0.5">Painting &amp; Decor</span>
+          </span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#home" class="text-sm text-white/85 hover:text-gold-400 transition">Home</a>
+          <a href="#about" class="text-sm text-white/85 hover:text-gold-400 transition">About</a>
+          <a href="#projects" class="text-sm text-white/85 hover:text-gold-400 transition">Projects</a>
+          <a href="#contact" class="text-sm text-white/85 hover:text-gold-400 transition">Contact</a>
+          <a href="tel:+919663872424" class="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-300 text-navy-900 text-sm font-semibold px-5 py-2.5 rounded-full transition">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+            9663872424
+          </a>
+        </nav>
+        <button id="menuBtn" class="hamburger md:hidden p-2" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden fixed inset-y-0 right-0 w-72 bg-navy-900 text-white pt-24 px-7 shadow-2xl translate-x-full transition-transform duration-300 z-40">
+      <nav class="flex flex-col gap-6 text-lg">
+        <a href="#home" class="m-link hover:text-gold-400">Home</a>
+        <a href="#about" class="m-link hover:text-gold-400">About</a>
+        <a href="#projects" class="m-link hover:text-gold-400">Projects</a>
+        <a href="#contact" class="m-link hover:text-gold-400">Contact</a>
+        <a href="tel:+919663872424" class="mt-2 inline-flex items-center justify-center gap-2 bg-gold-400 text-navy-900 font-semibold px-5 py-3 rounded-full">Call 9663872424</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HOME / HERO -->
+  <section id="home" class="relative min-h-screen flex items-center">
+    <img src="https://images.unsplash.com/photo-1562259949-e8e7449e0470?auto=format&fit=crop&w=2000&q=80" alt="Professional painter applying a smooth finish on an interior wall" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-20 w-full">
+      <p class="fade-up text-gold-400 tracking-[0.28em] uppercase text-xs md:text-sm font-medium mb-5">Bengaluru · Since three decades</p>
+      <h1 class="fade-up font-serif text-white text-4xl sm:text-5xl md:text-7xl leading-[1.08] max-w-3xl">
+        Colour that lasts.<br />Craft that shows.
+      </h1>
+      <p class="fade-up mt-6 text-white/80 text-base md:text-lg max-w-xl leading-relaxed">
+        COLORON Painting Contractor and Decorators — led by Rajesh — delivering meticulous interior, exterior and commercial painting across Bengaluru for <strong class="text-white">30+ years</strong> and <strong class="text-white">1000+ projects</strong>.
+      </p>
+      <div class="fade-up mt-9 flex flex-wrap gap-4">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-300 text-navy-900 font-semibold px-7 py-3.5 rounded-full transition">
+          Request a Quote
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#projects" class="inline-flex items-center gap-2 border border-white/35 hover:border-gold-400 text-white px-7 py-3.5 rounded-full transition">View Projects</a>
+      </div>
+      <div class="fade-up mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
+        <div>
+          <p class="stat-num font-serif text-3xl md:text-4xl text-gold-400" data-count="30">0</p>
+          <p class="text-white/60 text-xs tracking-wider uppercase mt-1">Years Experience</p>
+        </div>
+        <div>
+          <p class="stat-num font-serif text-3xl md:text-4xl text-gold-400" data-count="1000">0</p>
+          <p class="text-white/60 text-xs tracking-wider uppercase mt-1">Projects Completed</p>
+        </div>
+        <div>
+          <p class="font-serif text-3xl md:text-4xl text-gold-400">Rajesh</p>
+          <p class="text-white/60 text-xs tracking-wider uppercase mt-1">Owner &amp; Lead</p>
+        </div>
+        <div>
+          <p class="font-serif text-3xl md:text-4xl text-gold-400">BLR</p>
+          <p class="text-white/60 text-xs tracking-wider uppercase mt-1">Citywide Service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES STRIP -->
+  <section class="bg-navy-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="flex items-start gap-3">
+        <span class="mt-1 h-8 w-8 shrink-0 rounded-full bg-gold-400/15 text-gold-400 flex items-center justify-center text-sm">01</span>
+        <div><p class="font-semibold">Interior Painting</p><p class="text-white/50 text-sm mt-1">Homes, villas &amp; apartments</p></div>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="mt-1 h-8 w-8 shrink-0 rounded-full bg-gold-400/15 text-gold-400 flex items-center justify-center text-sm">02</span>
+        <div><p class="font-semibold">Exterior Finishes</p><p class="text-white/50 text-sm mt-1">Weather-ready coatings</p></div>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="mt-1 h-8 w-8 shrink-0 rounded-full bg-gold-400/15 text-gold-400 flex items-center justify-center text-sm">03</span>
+        <div><p class="font-semibold">Decorative Works</p><p class="text-white/50 text-sm mt-1">Textures, accents &amp; detail</p></div>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="mt-1 h-8 w-8 shrink-0 rounded-full bg-gold-400/15 text-gold-400 flex items-center justify-center text-sm">04</span>
+        <div><p class="font-semibold">Commercial Painting</p><p class="text-white/50 text-sm mt-1">Offices, retail &amp; high-rise</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="relative fade-up">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="img-zoom rounded-2xl overflow-hidden h-64 md:h-80">
+              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" alt="Male painter in overalls working on a wall with a roller" class="w-full h-full object-cover" />
+            </div>
+            <div class="img-zoom rounded-2xl overflow-hidden h-64 md:h-80 mt-10">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Painting and finishing crew at work on site" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="absolute -bottom-6 left-6 bg-navy-900 text-white px-6 py-5 rounded-2xl shadow-xl">
+            <p class="font-serif text-3xl text-gold-400">30+</p>
+            <p class="text-xs tracking-widest uppercase text-white/60 mt-1">Years of Trust</p>
+          </div>
+        </div>
+        <div class="fade-up">
+          <p class="text-gold-600 tracking-[0.22em] uppercase text-xs font-semibold mb-3">About COLORON</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-navy-900 leading-tight">A family of craftsmen, led by Rajesh.</h2>
+          <div class="gold-line mt-5 mb-6"></div>
+          <p class="text-navy-700/80 leading-relaxed">
+            COLORON Painting Contractor and Decorators is a Bengaluru-based painting firm built on patience, surface preparation and finishes that still look right years later. Under the guidance of owner <strong>Rajesh</strong>, our crews have completed more than a thousand residential and commercial projects — from villa interiors to 19-floor apartment towers.
+          </p>
+          <p class="text-navy-700/80 leading-relaxed mt-4">
+            We work with leading developers and private clients across Sarjapur Road, Electronic City, Hosur Road, Hennur, Whitefield, Bannerghatta and beyond. Every site is run with the same discipline: clean masking, honest materials, and a team that treats occupied homes with care.
+          </p>
+          <ul class="mt-8 space-y-3">
+            <li class="flex items-start gap-3"><span class="mt-1 text-gold-600">▸</span><span>Experienced male painting crews for high-rise, villa and commercial sites</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 text-gold-600">▸</span><span>Interior, exterior, decorative and large-scale commercial painting</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 text-gold-600">▸</span><span>Direct line to the owner — call Rajesh on 9663872424</span></li>
+          </ul>
+          <a href="tel:+919663872424" class="mt-8 inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-700 text-white font-semibold px-6 py-3.5 rounded-full transition">Speak with Rajesh</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20 md:py-28 bg-sand/60">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+        <div class="fade-up">
+          <p class="text-gold-600 tracking-[0.22em] uppercase text-xs font-semibold mb-3">Selected Work</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-navy-900">Projects that built our name</h2>
+          <div class="gold-line mt-5"></div>
+        </div>
+        <p class="fade-up text-navy-700/70 max-w-sm text-sm md:text-base">A snapshot of landmark residential and commercial painting delivered across Bengaluru.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="fade-up card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+          <div class="img-zoom h-52">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" alt="Residential apartment complex exterior" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <p class="text-xs tracking-widest uppercase text-gold-600 font-semibold">2007 · Sarjapur Road</p>
+            <h3 class="font-serif text-2xl text-navy-900 mt-2">Purva Sunshine</h3>
+            <p class="text-navy-700/75 text-sm mt-2 leading-relaxed">Major painting works for this prominent residential development — interiors and common areas executed to developer standards.</p>
+          </div>
+        </article>
+
+        <article class="fade-up card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+          <div class="img-zoom h-52">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Villa and apartment interiors with fresh paint finish" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <p class="text-xs tracking-widest uppercase text-gold-600 font-semibold">Electronic City</p>
+            <h3 class="font-serif text-2xl text-navy-900 mt-2">Daddy’s Garden</h3>
+            <p class="text-navy-700/75 text-sm mt-2 leading-relaxed">Apartments &amp; villas — full painting and decorative finishes for living spaces designed around light, gardens and family living.</p>
+          </div>
+        </article>
+
+        <article class="fade-up card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+          <div class="img-zoom h-52">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Modern residential interiors painted by COLORON crew" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <p class="text-xs tracking-widest uppercase text-gold-600 font-semibold">4 Sites</p>
+            <h3 class="font-serif text-2xl text-navy-900 mt-2">LGCL Projects</h3>
+            <p class="text-navy-700/75 text-sm mt-2 leading-relaxed">Three projects on Hosur Road and one on Henur Road — coordinated painting programmes across multiple LGCL developments.</p>
+          </div>
+        </article>
+
+        <article class="fade-up card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+          <div class="img-zoom h-52">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="High-rise apartment tower similar to Ozone Evergreen" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <p class="text-xs tracking-widest uppercase text-gold-600 font-semibold">Harlor Road · High-rise</p>
+            <h3 class="font-serif text-2xl text-navy-900 mt-2">Ozone Evergreen</h3>
+            <p class="text-navy-700/75 text-sm mt-2 leading-relaxed">19-floor apartment painting — organised floor-wise execution, elevation work and interior finishes at height, with safety-first crews.</p>
+          </div>
+        </article>
+
+        <article class="fade-up card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+          <div class="img-zoom h-52">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" alt="Large commercial interior space after professional painting" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <p class="text-xs tracking-widest uppercase text-gold-600 font-semibold">Retail &amp; Mixed Use</p>
+            <h3 class="font-serif text-2xl text-navy-900 mt-2">Gina Projects</h3>
+            <p class="text-navy-700/75 text-sm mt-2 leading-relaxed">Including Decathlon Bannerghatta Road, Whitefield and many more Gina sites — dependable turnaround for high-visibility commercial spaces.</p>
+          </div>
+        </article>
+
+        <article class="fade-up card-hover bg-white rounded-2xl overflow-hidden shadow-sm">
+          <div class="img-zoom h-52">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" alt="Male painters completing commercial office painting work" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <p class="text-xs tracking-widest uppercase text-gold-600 font-semibold">Offices · Retail · Campuses</p>
+            <h3 class="font-serif text-2xl text-navy-900 mt-2">Commercial Painting</h3>
+            <p class="text-navy-700/75 text-sm mt-2 leading-relaxed">Offices, showrooms and institutional interiors — night and phased work available so your business stays open while we paint.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div class="fade-up">
+          <p class="text-gold-600 tracking-[0.22em] uppercase text-xs font-semibold mb-3">Contact</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-navy-900 leading-tight">Let’s finish your next space properly.</h2>
+          <div class="gold-line mt-5 mb-6"></div>
+          <p class="text-navy-700/80 leading-relaxed">
+            Share a few details and Rajesh or the COLORON team will get back to you with a site visit and a clear quote. For a quicker conversation, call or WhatsApp the number below.
+          </p>
+
+          <div class="mt-8 space-y-5">
+            <a href="tel:+919663872424" class="flex items-center gap-4 group">
+              <span class="h-12 w-12 rounded-full bg-navy-900 text-gold-400 flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+              </span>
+              <span>
+                <span class="block text-xs uppercase tracking-widest text-navy-700/50">Call Rajesh</span>
+                <span class="block text-xl font-semibold text-navy-900 group-hover:text-gold-600 transition">9663872424</span>
+              </span>
+            </a>
+            <a href="https://wa.me/919663872424" target="_blank" rel="noopener" class="flex items-center gap-4 group">
+              <span class="h-12 w-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 0 0 3.3 17.5L2 22l4.6-1.2A10 10 0 1 0 20 3.9zm-8 16.2a8.3 8.3 0 0 1-4.2-1.1l-.3-.2-2.7.7.7-2.6-.2-.3a8.3 8.3 0 1 1 6.7 3.5zm4.6-6.2c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1c-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1s-1-.4-1.9-1.2c-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.2.2-.4 0-.1 0-.3 0-.4s-.5-1.3-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.8 3.4.5.2.9.4 1.3.5.5.2 1 .2 1.3.1.4-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.4-.3z"/></svg>
+              </span>
+              <span>
+                <span class="block text-xs uppercase tracking-widest text-navy-700/50">WhatsApp</span>
+                <span class="block text-xl font-semibold text-navy-900 group-hover:text-gold-600 transition">+91 96638 72424</span>
+              </span>
+            </a>
+            <div class="flex items-center gap-4">
+              <span class="h-12 w-12 rounded-full bg-sand text-navy-900 flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+              </span>
+              <span>
+                <span class="block text-xs uppercase tracking-widest text-navy-700/50">Service Area</span>
+                <span class="block text-lg font-semibold text-navy-900">Bengaluru &amp; surrounding corridors</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="mt-10 img-zoom rounded-2xl overflow-hidden h-48 hidden lg:block">
+            <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=1200&q=80" alt="Painter carefully cutting in along a wall edge" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="fade-up bg-white rounded-3xl shadow-xl shadow-navy-900/5 p-7 md:p-10">
+          <h3 class="font-serif text-2xl text-navy-900 mb-1">Request a quote</h3>
+          <p class="text-sm text-navy-700/60 mb-7">We’ll respond during working hours. Fields marked * are required.</p>
+          <form id="quoteForm" novalidate>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="block sm:col-span-2">
+                <span class="text-xs font-semibold tracking-wide uppercase text-navy-700/70">Full name *</span>
+                <input type="text" name="name" required class="mt-1.5 w-full rounded-xl border border-navy-900/10 bg-cream/60 px-4 py-3 text-sm" placeholder="Your name" />
+              </label>
+              <label class="block">
+                <span class="text-xs font-semibold tracking-wide uppercase text-navy-700/70">Phone *</span>
+                <input type="tel" name="phone" required class="mt-1.5 w-full rounded-xl border border-navy-900/10 bg-cream/60 px-4 py-3 text-sm" placeholder="10-digit mobile" />
+              </label>
+              <label class="block">
+                <span class="text-xs font-semibold tracking-wide uppercase text-navy-700/70">Email</span>
+                <input type="email" name="email" class="mt-1.5 w-full rounded-xl border border-navy-900/10 bg-cream/60 px-4 py-3 text-sm" placeholder="you@email.com" />
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="text-xs font-semibold tracking-wide uppercase text-navy-700/70">Project type</span>
+                <select name="type" class="mt-1.5 w-full rounded-xl border border-navy-900/10 bg-cream/60 px-4 py-3 text-sm">
+                  <option value="">Select…</option>
+                  <option>Interior painting</option>
+                  <option>Exterior painting</option>
+                  <option>Decorative finishes</option>
+                  <option>Apartment / high-rise</option>
+                  <option>Commercial</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="text-xs font-semibold tracking-wide uppercase text-navy-700/70">Message *</span>
+                <textarea name="message" required rows="4" class="mt-1.5 w-full rounded-xl border border-navy-900/10 bg-cream/60 px-4 py-3 text-sm resize-y" placeholder="Location, size of work, preferred dates…"></textarea>
+              </label>
+            </div>
+            <p id="formError" class="hidden mt-3 text-sm text-red-600"></p>
+            <button type="submit" class="mt-6 w-full bg-navy-900 hover:bg-navy-700 text-white font-semibold py-3.5 rounded-full transition">Send enquiry</button>
+            <p class="mt-3 text-center text-xs text-navy-700/50">Or call <a href="tel:+919663872424" class="underline hover:text-gold-600">9663872424</a> directly.</p>
+          </form>
+          <div id="formSuccess" class="hidden text-center py-10">
+            <div class="mx-auto h-14 w-14 rounded-full bg-gold-400/20 text-gold-600 flex items-center justify-center mb-4">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h4 class="font-serif text-2xl text-navy-900">Thank you</h4>
+            <p class="mt-2 text-navy-700/75">Your enquiry is ready. Please call or WhatsApp Rajesh on <strong>9663872424</strong> so we can confirm the details.</p>
+            <a href="https://wa.me/919663872424" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold px-6 py-3 rounded-full">Continue on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-navy-950 text-white pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+        <div>
+          <p class="font-serif text-2xl">COLORON</p>
+          <p class="text-gold-400 text-xs tracking-[0.22em] uppercase mt-1">Painting Contractor &amp; Decorators</p>
+          <p class="text-white/55 text-sm mt-4 leading-relaxed">30+ years. 1000+ projects. Owner-led painting for homes, high-rises and commercial spaces in Bengaluru.</p>
+        </div>
+        <div>
+          <p class="text-xs tracking-widest uppercase text-gold-400 mb-4">Navigate</p>
+          <div class="flex flex-col gap-2 text-sm text-white/75">
+            <a href="#home" class="hover:text-gold-400">Home</a>
+            <a href="#about" class="hover:text-gold-400">About</a>
+            <a href="#projects" class="hover:text-gold-400">Projects</a>
+            <a href="#contact" class="hover:text-gold-400">Contact</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs tracking-widest uppercase text-gold-400 mb-4">Owner</p>
+          <p class="text-lg font-semibold">Rajesh</p>
+          <a href="tel:+919663872424" class="block text-white/80 hover:text-gold-400 mt-1">9663872424</a>
+          <a href="https://wa.me/919663872424" class="inline-block mt-4 text-sm border border-white/20 hover:border-gold-400 px-4 py-2 rounded-full">WhatsApp us</a>
+        </div>
+      </div>
+      <p class="text-center text-white/40 text-xs mt-8">© <span id="year"></span> COLORON Painting Contractor and Decorators. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating actions -->
+  <div class="fixed bottom-5 right-5 z-40 flex flex-col gap-3">
+    <a href="https://wa.me/919663872424" target="_blank" rel="noopener" aria-label="WhatsApp Rajesh" class="wa-pulse float-btn h-14 w-14 rounded-full bg-[#25D366] text-white flex items-center justify-center">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 0 0 3.3 17.5L2 22l4.6-1.2A10 10 0 1 0 20 3.9zm-8 16.2a8.3 8.3 0 0 1-4.2-1.1l-.3-.2-2.7.7.7-2.6-.2-.3a8.3 8.3 0 1 1 6.7 3.5zm4.6-6.2c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1c-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1s-1-.4-1.9-1.2c-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.2.2-.4 0-.1 0-.3 0-.4s-.5-1.3-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.8 3.4.5.2.9.4 1.3.5.5.2 1 .2 1.3.1.4-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.4-.3z"/></svg>
+    </a>
+    <a href="tel:+919663872424" aria-label="Call Rajesh" class="float-btn h-14 w-14 rounded-full bg-gold-400 text-navy-900 flex items-center justify-center md:hidden">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+    </a>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('nav-scrolled', window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const toggleMenu = (open) => {
+      const willOpen = open ?? !mobileMenu.classList.contains('menu-open');
+      mobileMenu.classList.toggle('menu-open', willOpen);
+      menuBtn.classList.toggle('active', willOpen);
+      menuBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    };
+    menuBtn.addEventListener('click', () => toggleMenu());
+    document.querySelectorAll('.m-link').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+    const counters = document.querySelectorAll('[data-count]');
+    const countIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const end = parseInt(el.dataset.count, 10);
+        const plus = true;
+        const dur = 1400;
+        const start = performance.now();
+        const tick = (now) => {
+          const p = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(end * eased) + (plus ? '+' : '');
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        countIo.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => countIo.observe(c));
+
+    const form = document.getElementById('quoteForm');
+    const err = document.getElementById('formError');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form));
+      const phone = (data.phone || '').replace(/\s+/g, '');
+      if (!data.name.trim() || !data.message.trim()) {
+        err.textContent = 'Please fill in your name and message.';
+        err.classList.remove('hidden');
+        return;
+      }
+      if (!/^[0-9]{10}$/.test(phone) && !/^\+91[0-9]{10}$/.test(phone)) {
+        err.textContent = 'Enter a valid 10-digit Indian mobile number.';
+        err.classList.remove('hidden');
+        return;
+      }
+      err.classList.add('hidden');
+      form.classList.add('hidden');
+      document.getElementById('formSuccess').classList.remove('hidden');
+      const text = encodeURIComponent(
+        'Hello COLORON / Rajesh, I would like a painting quote.\nName: ' + data.name +
+        '\nPhone: ' + data.phone +
+        (data.email ? '\nEmail: ' + data.email : '') +
+        (data.type ? '\nType: ' + data.type : '') +
+        '\nMessage: ' + data.message
+      );
+      const wa = document.querySelector('#formSuccess a');
+      wa.href = 'https://wa.me/919663872424?text=' + text;
+    });
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "COLORON Painting Contractor and Decorators",
+    "description": "Painting contractor and decorators in Bengaluru with 30+ years of experience and 1000+ completed projects.",
+    "telephone": "+919663872424",
+    "founder": { "@type": "Person", "name": "Rajesh" },
+    "areaServed": "Bengaluru",
+    "url": "https://coloron.example"
+  }
+  </script>
+</body>
+</html>
